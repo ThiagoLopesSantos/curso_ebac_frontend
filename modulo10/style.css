@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #faebd7;
+}
+header, footer {
+    background-color: #704814;
+    padding: 16px 0;
+    margin: 0 auto;
+    color:#faebd7;
+}
+.flex {
+    display: flex;
+}
+.container {
+    margin: 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
+header > .container {
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    text-transform: uppercase;
+    border: 2px double #faebd7;
+    box-shadow: 0 0 10px #000;
+    padding: 5px;
+}
+header ul {
+    gap: 20px;
+}
+header li {
+    list-style: none;
+    border: 2px double #faebd7;
+    box-shadow: 0 0 5px #000;
+    padding: 2px;
+}
+header li:hover{
+    cursor: pointer;
+    box-shadow: none;
+    background-color: rgba(255,255,255,0.1);
+}
+header li a {
+    text-decoration: none;
+    color: #faebd7;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+header li a:hover {
+    color: #fff;
+}
+
+section{
+    margin: 10px 0;
+    height:calc(100vh - 154px);
+}
+section h2 {
+    padding: 16px 0;
+    justify-content: center;
+}
+
+.form-campo {
+    margin-bottom: 5px;
+}
+
+.form-campo label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-campo input{
+    width: 100%;
+    display: block;
+    padding: 3px;
+}
+
+form {
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+form button {
+    background-color: #704814;
+    color: #faebd7;
+    font-weight: bold;
+    max-width: 120px;
+    width: 100%;
+    border: 1px solid #000;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+form button:hover {
+    background-color: #c2a179;
+    color: #000;
+}
+
+footer .container {
+    justify-content: center;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
