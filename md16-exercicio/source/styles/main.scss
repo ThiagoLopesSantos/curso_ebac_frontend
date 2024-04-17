@@ -1,0 +1,88 @@
+@use './config/reset';
+@use './config/variaveis';
+
+@mixin style() {
+    background-color: variaveis.$corPrincipal;
+    font-family: variaveis.$fontePadrao;
+    color: variaveis.$corTextoPrincipal;
+
+}
+
+body {
+    background-color: variaveis.$corDeFundo;
+}
+
+#cabecalho {
+    @include style();
+
+    .container {
+        h1 {
+            color: variaveis.$corTextoPrincipal;
+        }
+    }
+
+    .nav {
+        .nav-link {
+            color: variaveis.$corTextoPrincipal;
+        }
+        .nav-link.active {
+            color: variaveis.$corTextoSecundaria;
+            background-color: variaveis.$corDeFundo;
+        }
+    }
+}
+
+#carousel {
+    .carousel-item {
+        img {
+            width: 100%;
+            max-height: 690px; 
+            object-fit: cover;
+        } 
+    }
+    
+}
+
+.carousel-caption {
+    background-color: variaveis.$corDeFundo;
+    color: variaveis.$corTextoSecundaria;  
+
+    h2 {
+        text-shadow: variaveis.$sombraTexto;
+    }
+}
+
+.social-links {
+    li {
+        list-style: none;
+        a {
+            color: variaveis.$corPrincipal;
+            font-size: 50px;
+
+            &:hover {
+                color: variaveis.$corTextoSecundaria;
+            }
+        }
+    }
+}
+
+.btn {
+    background-color: variaveis.$corPrincipal;
+    color: variaveis.$corTextoPrincipal;
+
+    &:hover {
+        background-color: darken(variaveis.$corPrincipal, 10%);
+        color: variaveis.$corTextoSecundaria;
+    }
+}
+
+.alert {
+    color: variaveis.$corTextoSecundaria;
+    background-color: variaveis.$corTextoPrincipal;
+    border-radius: 0;
+}
+
+footer {
+    @include style();
+}
+
